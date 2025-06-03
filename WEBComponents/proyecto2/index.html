@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes</title>
+    <script>
+        class SaludoElement extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: 'open' });
+            }
+
+            static get observedAttributes() {
+                return ['nombre'];
+            }
+
+            attributeChangedCallback(name, oldValue, newValue) {
+                if (name === 'nombre') {
+                    this.render();
+                }
+            }
+
+            connectedCallback() {
+                this.render();
+            }
+
+            render() {
+                const nombre = this.getAttribute('nombre') || 'Invitado';
+                this.shadowRoot.innerHTML = `<p>Hola, ${nombre}!</p>`;
+            }
+        }
+
+        customElements.define('saludo-element', SaludoElement);
+    </script>
+</head>
+<body>
+    <saludo-element nombre="Juan"></saludo-element>
+    <!-- Puedes cambiar el valor de nombre -->
+    <saludo-element nombre="Ana"></saludo-element>
+    <saludo-element></saludo-element> <!-- Muestra "Invitado" por defecto -->
+</body>
+</html>
