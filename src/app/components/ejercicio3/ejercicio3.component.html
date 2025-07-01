@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="txtInput">
+        <label for="">Ingrese tarea:</label>
+        <input type="text" #tareaInput >
+    </div>
+    <div>
+        <button
+            (click)="agregarTarea(tareaInput.value); tareaInput.value=''"
+        >Agregar Tarea</button>
+    </div>
+    <div>
+       <p>Ultima Tarea Agregada: {{ tarea }}</p> 
+    </div>
+    <div>
+        <ul *ngIf="tareas.length>0" >
+            <li *ngFor="let item of tareas"> {{ item }} </li>
+        </ul>
+    </div>
+</div>

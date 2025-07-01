@@ -1,0 +1,10 @@
+.content-son{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 400px;
+    background-color: rgb(139, 180, 246);
+    border-radius: 5px;
+}

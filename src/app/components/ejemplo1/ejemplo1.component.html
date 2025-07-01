@@ -1,0 +1,18 @@
+<div class="container">
+    <button
+        (click)="mostrarMensaje()"
+    >Mostrar Mensaje</button>
+
+    <button
+        (click)="resetMensaje()"
+    >Reset Mensaje</button>
+
+    <button
+        (click)="ocultarMensaje()"
+    >{{ txtBtnOcultar }}</button>
+
+    
+    <p
+        *ngIf="!ocultar"  
+    > {{ mensaje }} </p>
+</div>

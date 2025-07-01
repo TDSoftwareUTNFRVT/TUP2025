@@ -1,0 +1,15 @@
+<div class="padre-container">
+    <h1>Este es el componente PADRE</h1>
+    <div class="input-container">
+        <label for="mensaje">Escribe un mensaje para el hijo:</label>
+        <input type="text" id="mensaje" [(ngModel)]="msn" />
+        <button (click)="enviarMensaje()">Enviar</button>
+    </div>
+
+    <div>
+        <app-hijo
+            [mensaje]="mensajeParaHijo"
+            (mensajeHijo)="reciboMensajeHijo($event)"
+        ></app-hijo>
+    </div>
+</div>
