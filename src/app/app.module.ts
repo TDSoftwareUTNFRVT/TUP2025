@@ -11,6 +11,11 @@ import { Ejercicio3Component } from './components/ejercicio3/ejercicio3.componen
 import { PadreComponent } from './components/padre/padre.component';
 import { HijoComponent } from './components/padre/hijo/hijo.component';
 import { RickandmortyComponent } from './pages/rickandmorty/rickandmorty.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
+import { EmisorComponent } from './components/emisor/emisor.component';
+import { ReceptorComponent } from './components/receptor/receptor.component';
+import { EmisorReactivoComponent } from './components/emisor-reactivo/emisor-reactivo.component';
+import { ReceptorReactivoComponent } from './components/receptor-reactivo/receptor-reactivo.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,12 @@ import { RickandmortyComponent } from './pages/rickandmorty/rickandmorty.compone
     Ejercicio3Component,
     PadreComponent,
     HijoComponent,
-    RickandmortyComponent
+    RickandmortyComponent,
+    InicioComponent,
+    EmisorComponent,
+    ReceptorComponent,
+    EmisorReactivoComponent,
+    ReceptorReactivoComponent
   ],
   imports: [
     BrowserModule,

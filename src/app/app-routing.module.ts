@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PadreComponent } from './components/padre/padre.component';
 import { RickandmortyComponent } from './pages/rickandmorty/rickandmorty.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
 
 const routes: Routes = [
   {
@@ -9,8 +10,12 @@ const routes: Routes = [
     component: PadreComponent
   },
   {
-    path: 'inicio',
+    path: 'padre',
     component: PadreComponent
+  },
+  {
+    path: 'inicio',
+    component: InicioComponent
   },
   {
     path: 'rickandmorty',
